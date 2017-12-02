@@ -1,0 +1,53 @@
+" enable syntax and plugins"
+syntax enable
+filetype plugin on
+set backspace=indent,eol,start
+set shiftwidth=4
+set autoindent
+set number
+
+" no_plugins.vim
+" finding files:
+
+" 目录下所有文件， tab-completion
+set path+=**
+
+"显示所有的文件，tab-completion"
+set wildmenu
+set incsearch
+
+" :ls 
+" :b
+
+" TAG JUMPING:
+"  create the tags file
+command! MakeTags !ctags -R .
+"Use ^] to jump to tag under cursor
+"Use g^] for ambiguous tags
+"Use ^t to jump back up the tag stack
+
+" DETAIL in ins-completion use ':help ins-completion'
+"HILIGHT
+"--^x^n for just this file
+"--^x^f for filenames
+"--^x^] for tags
+"--^n for any thing specified by the 'complete' option
+
+" NOW WE CAN:
+" -- use ^n and ^p to go back and forth in the suggestion list
+
+
+" File browsing:
+let g:netrw_banner=0  "disable annoying banner
+let g:netrw_browse_split=4 " open in prior window
+let g:netrw_altv=1 " open split to the right
+let g:netrw_liststyle=3 " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()  
+
+" NOW WE CSN
+" - :edit a fold to open a file browser
+"   - <CR>/v/t to open in an h-split/v-split/tab
+"   - check |netrw_browser_maps|for more mappings
+
+
+" snippets

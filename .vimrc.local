@@ -1,0 +1,50 @@
+"colorscheme molokai
+
+
+" {index}gt tab切换
+
+
+
+autocmd VimEnter * set nospell
+set t_Co=256
+set background=dark
+set foldlevelstart=99
+set foldmethod=manual
+set cc=120
+set backspace=indent,eol,start
+set cursorline
+let g:ctrlp_use_caching = 1
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:pymode_lint_on_write = 0
+
+function! <SID>LocationPrevious()
+  try
+    lprev
+  catch /^Vim\%((\a\+)\)\=:E553/
+  endtry
+endfunction
+function! <SID>LocationNext()
+  try
+    lnext
+  catch /^Vim\%((\a\+)\)\=:E553/
+    lfirst
+  endtry
+endfunction
+nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
+nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
+nmap <silent> sp    <Plug>LocationPrevious
+nmap <silent> sn    <Plug>LocationNext
+
+"syntax enable
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=16
+"set t_Co=256
+"syntax enable
+"let g:solarized_termtrans = 1
+"let g:solarized_termcolors=256
+"set  background=dark
+"colorscheme solarized
+set relativenumber
+

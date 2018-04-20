@@ -1,0 +1,3 @@
+function lb() {
+    vim ~/own/projects/logbook/$(date '+%Y-%m-%d').md
+}

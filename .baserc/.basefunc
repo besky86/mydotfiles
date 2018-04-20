@@ -1,0 +1,13 @@
+function active_env() {
+    for i in $(find $1 -type f -name "*rc");
+    do
+        active_file $i
+    done
+}
+
+function active_file(){
+    echo $1
+    if [ -f $1 ] ; then
+       source $1
+    fi
+}

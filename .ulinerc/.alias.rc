@@ -1,0 +1,9 @@
+alias cmbc_d="ssh -NL 6689:192.168.20.100:5432 cmbc_online"
+alias cmbc_td="ssh -NL 6689:192.168.20.90:5432 cmbc_online"
+alias spd_d="ssh -NL 6689:192.168.20.100:5432 spd_clear_prod"
+alias spd_td="ssh -NL 6689:192.168.20.90:5432 spd_clear_prod"
+alias dev_d="ssh -NL 6689:127.0.0.1:5432 cmbc_dev"
+alias mydb_dev='ssh -NL 7890:127.0.0.1:5432 cmbc_dev'
+alias mydb_dev2='ssh -NL 7891:192.168.0.3:5432 cmbc_dev -v'
+alias shanghai_d=' ssh  -NL 7689:172.18.20.100:5432 shanghai_cms'
+
